@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-type", content="text/html; charset=utf-8")/
+    meta(name="viewport", content="width=device-width,initial-scale=1")/
+    if htmlWebpackPlugin.files.favicon
+      link(href=htmlWebpackPlugin.files.favicon, rel="shortcut icon")
+    title= htmlWebpackPlugin.options.title
+    each css in htmlWebpackPlugin.files.css
+      link(href=css, rel="stylesheet")/
+  body
+    if htmlWebpackPlugin.options.devServer
+      script(src=htmlWebpackPlugin.options.devServer+'/webpack-dev-server.js')
+

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --config ./build/webpack.config.dev.js",
-    "build": "webpack --config ./build/webpack.config.prod.js",
+    "build": "webpack --config ./build/webpack.config.prod.js --progress",
+    "watch": "webpack --config ./build/webpack.config.dev.js --progress --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +20,7 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-svg-symbols": "^1.0.0",
     "html-webpack-plugin": "^2.22.0",
